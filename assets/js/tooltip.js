@@ -1,4 +1,4 @@
-function tooltip(tooltip, newDiv) {
+function tooltip(tooltip, text) {
     tooltip = document.querySelector('#tooltip');
     const body = document.querySelector('body');
     const header = document.querySelector('.top-site');
@@ -17,7 +17,11 @@ function tooltip(tooltip, newDiv) {
 
         newDiv = document.createElement('div');
         newDiv.classList.add('tooltip');
-        newDiv.innerHTML = 'Minions ipsum gelatooo uuuhhh para tú bappleees para tú tank yuuu! Gelatooo po kass. Bappleees poopayee tulaliloo pepete belloo! Wiiiii. Baboiii hana dul sae bappleees pepete hana dul sae po kass po kass baboiii.';
+        if(document.querySelector('#icon1')) {
+            text = newDiv.innerHTML = 'Minions ipsum gelatooo uuuhhh para tú bappleees para tú tank yuuu! Gelatooo po kass. Bappleees poopayee tulaliloo pepete belloo! Wiiiii. Baboiii hana dul sae bappleees pepete hana dul sae po kass po kass baboiii.';
+        } else if(document.querySelector('#icon2')) {
+            text = newDiv.innerHTML = 'Texto diferente';
+        }
         const largura = 200;
         newDiv.style.position = "fixed";
         newDiv.style.width = largura + "px";
